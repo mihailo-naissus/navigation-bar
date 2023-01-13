@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo-details">
+            <i class='bx bxs-circle'></i>
+            <div class="logo_name">Le collège</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Pretraga...">
+                <span class="tooltip">Pretraga</span>
+            </li>
+            <li>
+                <a href="#">
+
+                    <i class='bx bx-shape-square'></i>
+
+                    <span class="links_name">Gramatika</span>
+                </a>
+                <span class="tooltip">Gramatika</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-message-square-dots'></i>
+                    <span class="links_name">Prevod</span>
+                </a>
+                <span class="tooltip">Prevod</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-book-reader'></i>
+                    <span class="links_name">Čitanje</span>
+                </a>
+                <span class="tooltip">Čitanje</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-headphone'></i>
+                    <span class="links_name">Slušanje</span>
+                </a>
+                <span class="tooltip">Slušanje</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-street-view'></i>
+                    <span class="links_name">Razumevanje</span>
+                </a>
+                <span class="tooltip">Razumevanje</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bxs-edit'></i>
+                    <span class="links_name">Vežbanja</span>
+                </a>
+                <span class="tooltip">Vežbanja</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Podešavanja</span>
+                </a>
+                <span class="tooltip">Podešavanja</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+
+                    <div class="name_job">
+                        <div class="name">Anastasija G. S.</div>
+                        <div class="job">Napravljeno sa &#x2764; prema jeziku</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+
+    </div>
+    <div class="horizontal-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <section class="home-section">
+
+        <div class="text">Dashboard</div>
+
+
+        <div class="test-div">
+            <div class="div-num-2">
+                <h1 class="test-h1">Title</h1>
+
+                <p class="test-p" id="test-p-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor,
+                    magna a faucibus
+                    fermentum, risus
+                    velit convallis risus, sit amet ullamcorper magna augue et magna. </p>
+                <h2 class="test-h2">Subtitle</h2>
+                <p class="test-p">Vestibulum a nibh eget nunc euismod congue a id nisl. Sed commodo fringilla porttitor.
+                </p>
+                <table class="test-table">
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Data 3</td>
+                        <td>Data 4</td>
+                    </tr>
+                </table>
+                <p class="test-p">Quisque pharetra, augue a convallis tincidunt, sapien mauris luctus magna, ut suscipit
+                    nulla risus at
+                    enim. </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- JAVASCRIPT CODE -->
+
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+
+        // toggle "open" class on sidebar and "sidebar-open" class on body
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            document.querySelector("body").classList.toggle("sidebar-open");
+            menuBtnChange();
+        });
+
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+        }
+        const sidebarBtn = document.getElementById("btn");
+        sidebarBtn.addEventListener("click", function () {
+            document.querySelector("body").classList.toggle("sidebar-open");
+        });
+    </script>
+</body>
+
+</html>
