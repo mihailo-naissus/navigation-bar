@@ -1,3 +1,3 @@
 # navigation-bar
 Trying to work with naviagion bar
-It is not functional at the moment
+This is not functional navigation at the moment
