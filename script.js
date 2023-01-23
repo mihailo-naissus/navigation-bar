@@ -4,11 +4,14 @@ let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
 let searchBtn = document.querySelector(".bx-search");
 
+
 // This is an event listener for opening
 closeBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open");
     menuBtnChange();
 });
+
+
 
 
 searchBtn.addEventListener("click", () => {
