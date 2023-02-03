@@ -13,7 +13,6 @@ closeBtn.addEventListener("click", () => {
 
 
 
-
 searchBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open");
     menuBtnChange();
