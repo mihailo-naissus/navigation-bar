@@ -15,6 +15,7 @@ searchBtn.addEventListener("click", () => {
     menuBtnChange();
 });
 
+
 function menuBtnChange() {
     if (sidebar.classList.contains("open")) {
         closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
